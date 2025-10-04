@@ -1,5 +1,12 @@
 {
   "rewrites": [
-    { "source": "/(.*)", "destination": "/" }
+    {
+      "source": "/api/:path*",
+      "destination": "https://online-book-library-1mbm.onrender.com/api/:path*"
+    },
+    {
+      "source": "/((?!api|static|favicon\\.ico|manifest\\.json|logo192\\.png|logo512\\.png|robots\\.txt).*)",
+      "destination": "/"
+    }
   ]
 }
